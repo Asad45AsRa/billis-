@@ -235,7 +235,7 @@ const PortfolioPage = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Start Your Project
+          Start Your Projects
         </motion.button>
       </motion.section>
     </div>
