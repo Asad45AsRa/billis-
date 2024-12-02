@@ -127,7 +127,7 @@ const ServicesPage = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/contact"
+            href="/Contact"
             className="inline-flex items-center 
               bg-white text-indigo-700 font-semibold py-3 px-6 rounded-lg 
               transition duration-300 ease-in-out shadow-lg hover:shadow-xl"
@@ -237,7 +237,7 @@ const ServicesPage = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/contact"
+            href="/Contact"
             className="inline-flex items-center 
             bg-white text-indigo-700 font-semibold py-3 px-6 rounded-lg 
             transition duration-300 ease-in-out shadow-lg hover:shadow-xl"

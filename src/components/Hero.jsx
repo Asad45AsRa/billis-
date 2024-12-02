@@ -71,13 +71,13 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
-            <Link href="/contact" className="group">
+            <Link href="/Contact" className="group">
               <span className="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg hover:shadow-xl">
                 Get Started
                 <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
-            <Link href="/portfolio" className="group">
+            <Link href="/Portfolio" className="group">
               <span className="inline-flex items-center border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg hover:shadow-xl">
                 Our Portfolio
                 <FaLaptopCode className="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" />

@@ -4,6 +4,7 @@ import {
   Target, Code, Globe, Users, Award, Clock, 
   ArrowRight, Rocket, Check, Star, Activity 
 } from 'lucide-react';
+import Image from 'next/image';
 
 const AboutUs = () => {
   const coreValues = [
@@ -70,7 +71,7 @@ const AboutUs = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a href="/contact" className="inline-flex items-center 
+            <a href="/Contact" className="inline-flex items-center 
               bg-white text-indigo-700 font-semibold py-3 px-6 rounded-lg 
               transition duration-300 ease-in-out shadow-lg hover:shadow-xl">
               Get Started
@@ -113,10 +114,11 @@ const AboutUs = () => {
           className="group relative"
         >
           <div className="rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-300 group-hover:scale-105">
-            <img 
+            <Image
               src="/api/placeholder/600/400" 
               alt="Our Team" 
               className="w-full h-full object-cover"
+              height={0} width={0}
             />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-white shadow-lg rounded-xl p-4">
@@ -221,7 +223,7 @@ const AboutUs = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a href="/contact" className="inline-flex items-center 
+            <a href="/Services" className="inline-flex items-center 
               bg-white text-indigo-700 font-semibold py-3 px-6 rounded-lg 
               transition duration-300 ease-in-out shadow-lg hover:shadow-xl">
               Get in Touch
