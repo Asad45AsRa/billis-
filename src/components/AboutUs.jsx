@@ -218,7 +218,7 @@ const AboutUs = () => {
             Ready to Elevate Your Digital Strategy?
           </h2>
           <p className="text-lg mb-10 max-w-3xl mx-auto text-gray-200">
-            Join the hundreds of businesses we've helped transform through innovative digital solutions.
+            Join the hundreds of businesses we helped transform through innovative digital solutions.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}

@@ -165,7 +165,7 @@ const ContactUs = () => {
             className="text-xl max-w-3xl mx-auto opacity-80"
           >
             <Zap className="inline-block mr-2 text-yellow-300" size={24} />
-            Let's transform your digital vision into reality
+            Lets transform your digital vision into reality
           </motion.p>
         </div>
       </motion.div>
