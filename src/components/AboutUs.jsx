@@ -72,12 +72,12 @@ const AboutUs = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a href="/Contact" className="inline-flex items-center 
+            <Link href="/Contact" className="inline-flex items-center 
               bg-white text-indigo-700 font-semibold py-3 px-6 rounded-lg 
               transition duration-300 ease-in-out shadow-lg hover:shadow-xl">
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 ease-in-out" />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </motion.div>
