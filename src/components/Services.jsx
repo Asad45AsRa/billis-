@@ -122,7 +122,7 @@ const ServicesPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl max-w-3xl mx-auto mb-8"
           >
-            At Bliss Technologies, we provide end-to-end digital solutions that propel your business into the future.
+            At Bliss Technologies we provide end-to-end digital solutions that propel your business into the future
           </motion.p>
           <motion.a
             whileHover={{ scale: 1.05 }}
@@ -229,10 +229,10 @@ const ServicesPage = () => {
       >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Digital Presence?
+            Ready to Transform Your Digital Presence
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how Bliss Technologies can help you achieve your digital transformation goals.
+            Lets discuss how Bliss Technologies can help you achieve your digital transformation goals
           </p>
           <motion.a
             whileHover={{ scale: 1.05 }}

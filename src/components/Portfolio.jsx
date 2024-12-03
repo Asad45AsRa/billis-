@@ -118,7 +118,7 @@ const PortfolioPage = () => {
           Bliss Technologies
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Transforming ideas into digital experiences that inspire, engage, and drive success.
+          Transforming ideas into digital experiences that inspire engage and drive success
         </p>
       </motion.header>
 
@@ -226,7 +226,7 @@ const PortfolioPage = () => {
         transition={{ duration: 0.3 }}
       >
         <Coffee className="mx-auto w-16 h-16 mb-6 text-white" />
-        <h2 className="text-4xl font-extrabold mb-6">Let's Create Something Amazing</h2>
+        <h2 className="text-4xl font-extrabold mb-6">Let&apos;s Create Something Amazing</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto opacity-80">
           Collaborate with our expert team to bring your digital vision to life
         </p>

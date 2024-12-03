@@ -95,8 +95,8 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="text-3xl font-bold mb-6 text-indigo-400">Bliss Technologies</h3>
           <p className="text-gray-300 mb-4 leading-relaxed">
-            Transforming digital landscapes with innovative solutions and creative expertise. 
-            We turn your vision into cutting-edge technological realities.
+            Transforming digital landscapes with innovative solutions and creative expertise 
+            We turn your vision into cutting-edge technological realities
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((social, index) => (
@@ -159,7 +159,7 @@ const Footer = () => {
         <div>
           <h4 className="text-xl font-semibold mb-6 text-indigo-400">Stay Updated</h4>
           <p className="text-gray-300 mb-4 leading-relaxed">
-            Subscribe to our newsletter for latest updates, insights, and exclusive content
+            Subscribe to our newsletter for latest updates insights and exclusive content
           </p>
           <form onSubmit={handleNewsletterSubmit} className="flex">
             <input 
@@ -187,7 +187,7 @@ const Footer = () => {
           </form>
           {isSubscribed && (
             <p className="text-green-400 mt-2 text-sm animate-pulse">
-              Thank you for subscribing!
+              Thank you for subscribing
             </p>
           )}
         </div>
@@ -198,7 +198,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0 flex items-center">
             <Award size={20} className="mr-2 text-indigo-500" />
-            © {currentYear} Bliss Technologies. All Rights Reserved.
+            © {currentYear} Bliss Technologies. All Rights Reserved
           </div>
           <div className="flex space-x-4">
             <Link 

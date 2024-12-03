@@ -90,12 +90,12 @@ const AboutUs = () => {
           </h2>
           <div className="space-y-4 text-gray-600">
             <p>
-              At the forefront of digital transformation, we blend technological expertise 
-              with creative problem-solving to deliver exceptional digital experiences.
+              At the forefront of digital transformation we blend technological expertise 
+              with creative problem-solving to deliver exceptional digital experiences
             </p>
             <p>
-              With a proven track record of empowering businesses across diverse industries, 
-              we turn complex challenges into streamlined, innovative solutions.
+              With a proven track record of empowering businesses across diverse industries 
+              we turn complex challenges into streamlined innovative solutions
             </p>
             <div className="flex items-center space-x-3">
               <Check className="text-emerald-500" />
@@ -215,10 +215,10 @@ const AboutUs = () => {
       >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Elevate Your Digital Strategy?
+            Ready to Elevate Your Digital Strategy
           </h2>
           <p className="text-lg mb-10 max-w-3xl mx-auto text-gray-200">
-            Join the hundreds of businesses we helped transform through innovative digital solutions.
+            Join the hundreds of businesses we helped transform through innovative digital solutions
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
