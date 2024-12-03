@@ -126,7 +126,7 @@ const ContactUs = () => {
     {
       icon: MapPin,
       title: 'Address',
-      description: '123 Tech Street, Innovation City, Digital State 54321'
+      description: '123 Tech Street Innovation City Digital State 54321'
     },
     {
       icon: Phone,

@@ -85,17 +85,17 @@ const ServicesPage = () => {
     {
       icon: Target,
       title: "Tailored Solutions",
-      description: "Custom services designed to meet your specific business objectives."
+      description: "Custom services designed to meet your specific business objectives"
     },
     {
       icon: CheckCircle,
       title: "Cutting-Edge Technologies",
-      description: "Stay ahead with our expertise in the latest digital trends and innovations."
+      description: "Stay ahead with our expertise in the latest digital trends and innovations"
     },
     {
       icon: Award,
       title: "Proven Track Record",
-      description: "Delivering successful digital transformations across various industries."
+      description: "Delivering successful digital transformations across various industries"
     }
   ];
 

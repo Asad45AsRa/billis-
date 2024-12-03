@@ -198,7 +198,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0 flex items-center">
             <Award size={20} className="mr-2 text-indigo-500" />
-            © {currentYear} Bliss Technologies. All Rights Reserved
+            &#169; {currentYear} Bliss Technologies All Rights Reserved
           </div>
           <div className="flex space-x-4">
             <Link 

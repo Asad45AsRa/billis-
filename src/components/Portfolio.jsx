@@ -79,7 +79,7 @@ const PortfolioPage = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Exceptional work! They turned our complex requirements into an elegant digital solution.",
+      quote: "Exceptional work! They turned our complex requirements into an elegant digital solution",
       author: "Tech Innovator",
       company: "Silicon Valley Startup",
       rating: 5,
@@ -87,7 +87,7 @@ const PortfolioPage = () => {
     },
     {
       id: 2,
-      quote: "Incredible attention to detail and commitment to our vision.",
+      quote: "Incredible attention to detail and commitment to our vision",
       author: "Creative Director",
       company: "Global Design Agency",
       rating: 5,
@@ -203,7 +203,7 @@ const PortfolioPage = () => {
                     <Star key={i} className="w-6 h-6 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
-                <p className="italic text-gray-700 mb-4 text-lg">"{testimonial.quote}"</p>
+                <p className="italic text-gray-700 mb-4 text-lg">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center">
                   <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-4">
                     {testimonial.icon}

@@ -12,19 +12,19 @@ const AboutUs = () => {
     {
       icon: Target,
       title: "Client-Centric Innovation",
-      description: "Tailoring solutions that precisely match your unique business ecosystem.",
+      description: "Tailoring solutions that precisely match your unique business ecosystem",
       color: "indigo"
     },
     {
       icon: Code,
       title: "Technological Excellence",
-      description: "Leveraging cutting-edge technologies to drive transformative results.",
+      description: "Leveraging cutting-edge technologies to drive transformative results",
       color: "emerald"
     },
     {
       icon: Globe,
       title: "Global Perspective",
-      description: "Delivering world-class digital solutions with a personalized touch.",
+      description: "Delivering world-class digital solutions with a personalized touch",
       color: "sky"
     }
   ];
@@ -33,19 +33,19 @@ const AboutUs = () => {
     {
       icon: Users,
       title: "Strategic Discovery",
-      description: "Deep dive into your vision, challenges, and opportunities.",
+      description: "Deep dive into your vision challenges, and opportunities",
       color: "purple"
     },
     {
       icon: Award,
       title: "Innovative Design",
-      description: "Crafting comprehensive, forward-thinking digital strategies.",
+      description: "Crafting comprehensive forward-thinking digital strategies",
       color: "teal"
     },
     {
       icon: Clock,
       title: "Precision Execution",
-      description: "Agile implementation with continuous optimization.",
+      description: "Agile implementation with continuous optimization",
       color: "rose"
     }
   ];
