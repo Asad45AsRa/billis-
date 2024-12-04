@@ -147,7 +147,7 @@ const ContactUs = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white rounded-b-3xl shadow-2xl py-20 px-4"
+        className="hover:bg-slate-700 bg-slate-600 text-white rounded-b-3xl shadow-2xl py-20 px-4"
       >
         <div className="max-w-6xl mx-auto text-center">
           <motion.h1 
@@ -193,7 +193,7 @@ const ContactUs = () => {
               className="flex items-center mb-6 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-all group"
             >
               <div className="bg-white p-3 rounded-full mr-4 shadow-md group-hover:shadow-lg transition-shadow">
-                <info.icon className="text-indigo-600" size={28} />
+                <info.icon className="text-sky-600" size={28} />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800">{info.title}</h3>

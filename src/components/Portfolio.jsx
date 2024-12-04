@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { 
   Star, Check, Globe, Smartphone, ChartLine, Palette, 
   Code, Layout, TrendingUp, Zap, Send, Award, 
-  Briefcase, Target, Coffee
+  Briefcase, Target, Coffee, Cpu, Database, Layers, Workflow
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 // Reusable Components
 const Card = ({ children, className = '', onClick = null }) => (
   <motion.div 
-    className={`border rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${className}`}
-    whileHover={{ scale: 1.05 }}
+    className={`border-2 border-gray-100 rounded-3xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl ${className}`}
+    whileHover={{ scale: 1.03, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
     onClick={onClick}
   >
     {children}
@@ -18,13 +19,13 @@ const Card = ({ children, className = '', onClick = null }) => (
 );
 
 const CardHeader = ({ children, className = '' }) => (
-  <div className={`p-5 bg-gradient-to-r from-blue-50 to-blue-100 ${className}`}>
+  <div className={`p-6 bg-gradient-to-r from-blue-50 to-blue-100 ${className}`}>
     {children}
   </div>
 );
 
 const CardContent = ({ children, className = '' }) => (
-  <div className={`p-5 ${className}`}>
+  <div className={`p-6 ${className}`}>
     {children}
   </div>
 );
@@ -72,6 +73,22 @@ const PortfolioPage = () => {
       icon: <Layout className="w-14 h-14 text-pink-600" />,
       technologies: ['Figma', 'Adobe XD', 'Interaction Design'],
       category: ['Design', 'All']
+    },
+    {
+      id: 5,
+      title: 'Blockchain Solutions',
+      description: 'Innovative decentralized technologies and smart contracts',
+      icon: <Cpu className="w-14 h-14 text-teal-600" />,
+      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'Smart Contracts'],
+      category: ['Blockchain', 'All']
+    },
+    {
+      id: 6,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud architecture solutions',
+      icon: <Layers className="w-14 h-14 text-indigo-600" />,
+      technologies: ['AWS', 'Azure', 'Kubernetes', 'Docker'],
+      category: ['Cloud', 'All']
     }
   ];
 
@@ -80,15 +97,15 @@ const PortfolioPage = () => {
     {
       id: 1,
       quote: "Exceptional work! They turned our complex requirements into an elegant digital solution",
-      author: "Tech Innovator",
-      company: "Silicon Valley Startup",
+      author: "Sarah Thompson",
+      company: "Tech Innovator Inc.",
       rating: 5,
       icon: <Award className="w-12 h-12 text-yellow-500" />
     },
     {
       id: 2,
       quote: "Incredible attention to detail and commitment to our vision",
-      author: "Creative Director",
+      author: "Michael Rodriguez",
       company: "Global Design Agency",
       rating: 5,
       icon: <Zap className="w-12 h-12 text-orange-500" />
@@ -103,35 +120,46 @@ const PortfolioPage = () => {
     setFilteredProjects(filtered);
   }, [activeFilter]);
 
-  const projectCategories = ['All', 'Web', 'Mobile', 'Marketing', 'Design'];
+  const projectCategories = ['All', 'Web', 'Mobile', 'Marketing', 'Design', 'Blockchain', 'Cloud'];
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-6xl">
-      {/* Hero Section */}
+    <div className="container mx-auto px-4 py-12 max-w-7xl">
+      {/* Hero Section - Enhanced */}
       <motion.header 
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-16"
+        className="text-center mb-16 bg-gradient-to-br from-blue-50 to-indigo-100 py-16 rounded-3xl"
       >
-        <h1 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-          Bliss Technologies
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Transforming ideas into digital experiences that inspire engage and drive success
-        </p>
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+            Bliss Technologies
+          </h1>
+          <p className="text-2xl text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Transforming complex digital challenges into innovative, scalable solutions that drive business growth
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-sky-600 hover:bg-sky-700 text-white px-10 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all"
+          >
+            <Link href='/'>
+            Explore Our Work
+            </Link>
+          </motion.button>
+        </div>
       </motion.header>
 
-      {/* Project Filtering */}
-      <div className="flex justify-center mb-12 space-x-4">
+      {/* Project Filtering - Enhanced */}
+      <div className="flex flex-wrap justify-center mb-12 space-x-2 space-y-2">
         {projectCategories.map(category => (
           <motion.button
             key={category}
             onClick={() => setActiveFilter(category)}
             className={`px-4 py-2 rounded-full text-sm font-semibold transition-all 
               ${activeFilter === category 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-100 text-gray-700 hover:bg-blue-100'
+                ? 'bg-sky-700 text-white' 
+                : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
               }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -141,9 +169,9 @@ const PortfolioPage = () => {
         ))}
       </div>
 
-      {/* Projects Grid */}
+      {/* Projects Grid - Enhanced */}
       <motion.div 
-        className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
         initial="hidden"
         animate="visible"
         variants={{
@@ -168,17 +196,19 @@ const PortfolioPage = () => {
               exit={{ opacity: 0, scale: 0.8 }}
             >
               <Card>
-                <CardHeader>
-                  {project.icon}
-                  <CardTitle className="mt-4">{project.title}</CardTitle>
+                <CardHeader className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    {project.icon}
+                    <CardTitle>{project.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="text-gray-600 mb-6 min-h-[60px]">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span 
                         key={tech} 
-                        className="bg-blue-50 text-blue-800 px-2 py-1 rounded-full text-xs"
+                        className="bg-blue-50 text-sky-800 px-3 py-1 rounded-full text-xs font-medium"
                       >
                         {tech}
                       </span>
@@ -191,26 +221,30 @@ const PortfolioPage = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* Testimonials Section */}
-      <section className="mt-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Client Success Stories</h2>
+      {/* Testimonials Section - Enhanced */}
+      <section className="mt-16 bg-gray-50 rounded-3xl p-12">
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+          Client Success Stories
+        </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id}>
-              <CardContent className="p-6">
-                <div className="flex mb-4">
+            <Card key={testimonial.id} className="bg-white">
+              <CardContent className="p-8">
+                <div className="flex mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
-                <p className="italic text-gray-700 mb-4 text-lg">&quot;{testimonial.quote}&quot;</p>
+                <p className="italic text-gray-700 mb-6 text-xl leading-relaxed">
+                  &quot;{testimonial.quote}&quot;
+                </p>
                 <div className="flex items-center">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6">
                     {testimonial.icon}
                   </div>
                   <div>
-                    <p className="font-semibold text-lg">{testimonial.author}</p>
-                    <p className="text-gray-500 text-sm">{testimonial.company}</p>
+                    <p className="font-semibold text-lg text-gray-900">{testimonial.author}</p>
+                    <p className="text-gray-500">{testimonial.company}</p>
                   </div>
                 </div>
               </CardContent>
@@ -219,24 +253,32 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Call to Action - Enhanced */}
       <motion.section 
-        className="text-center mt-16 bg-gradient-to-br from-blue-500 to-purple-600 py-16 rounded-2xl text-white"
+        className="mt-16 bg-slate-600 hover:bg-slate-700 text-white py-20 rounded-3xl relative overflow-hidden"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <Coffee className="mx-auto w-16 h-16 mb-6 text-white" />
-        <h2 className="text-4xl font-extrabold mb-6">Let&apos;s Create Something Amazing</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto opacity-80">
-          Collaborate with our expert team to bring your digital vision to life
-        </p>
-        <motion.button 
-          className="bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-all"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Start Your Projects
-        </motion.button>
+        <div className="absolute inset-0 bg-pattern opacity-10"></div>
+        <div className="relative z-10 text-center">
+          <Workflow className="mx-auto w-20 h-20 mb-8 text-white" />
+          <h2 className="text-5xl font-extrabold mb-6">
+            Let&apos;s Build Your Digital Future
+          </h2>
+          <p className="text-2xl mb-10 max-w-3xl mx-auto opacity-80 leading-relaxed">
+            Transform your vision into reality with our expert team of digital innovators
+          </p>
+          <motion.button
+          
+            className="bg-sky-600 hover:bg-sky-700 text-white px-12 py-5 rounded-full text-lg font-bold  transition-all shadow-2xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+          <Link href='/Services'>
+            Start Your Project
+          </Link>
+          </motion.button>
+        </div>
       </motion.section>
     </div>
   );
