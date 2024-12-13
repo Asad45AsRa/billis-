@@ -200,7 +200,7 @@ const ContactUs = () => {
             className="text-xl max-w-3xl mx-auto opacity-80"
           >
             <Zap className="inline-block mr-2 text-yellow-300" size={24} />
-            Let's transform your digital vision into reality
+            Lets transform your digital vision into reality
           </motion.p>
         </div>
       </motion.div>
@@ -430,8 +430,8 @@ const ContactUs = () => {
               <h3 className="font-bold text-gray-800">Our Location</h3>
             </div>
             <p className="text-sm text-gray-600">
-              123 Tech Street, Innovation City
-              Digital State, 54321
+              123 Tech Street Innovation City
+              Digital State 54321
             </p>
             <div className="flex items-center mt-2">
               <Phone size={20} className="text-green-600 mr-2" />

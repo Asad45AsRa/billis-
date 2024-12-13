@@ -133,7 +133,7 @@ const AboutUs = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-100 font-light tracking-wide"
           >
-            Empowering businesses through strategic digital solutions that drive growth, innovation, and competitive advantage
+            Empowering businesses through strategic digital solutions that drive growth innovation and competitive advantage
           </motion.p>
           
           <motion.div
@@ -312,7 +312,7 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="text-lg mb-10 max-w-3xl mx-auto text-gray-100 font-light tracking-wide"
           >
-            Let's collaborate and turn your boldest digital dreams into reality. Our expert team is ready to propel your business into the future.
+            Lets collaborate and turn your boldest digital dreams into reality Our expert team is ready to propel your business into the future
           </motion.p>
           
           <motion.div
