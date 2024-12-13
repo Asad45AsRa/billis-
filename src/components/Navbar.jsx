@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { 
+  Menu, X, ChevronDown, Home, Info, Briefcase, 
+  Layers, Send, Globe, Award, Rocket 
+} from 'lucide-react';
 import Image from 'next/image';
 import bill from '../../public/Bliss-icon.png';
 
@@ -13,34 +16,39 @@ const Navbar = () => {
     { 
       href: "/", 
       label: "Home",
+      icon: Home,
       dropdown: false
     },
     { 
       href: "/AbouttUs", 
       label: "About", 
+      icon: Info,
       dropdown: [
-        { href: "/aboutus", label: "Company Overview" },
-        { href: "/about/team", label: "Leadership Team" },
-        { href: "/about/mission", label: "Our Vision" }
+        { href: "/aboutus", label: "Company Overview", icon: Globe },
+        { href: "/about/team", label: "Leadership Team", icon: Award },
+        { href: "/about/mission", label: "Our Vision", icon: Rocket }
       ]
     },
     { 
       href: "/Services", 
       label: "Services",
+      icon: Briefcase,
       dropdown: [
-        { href: "/services/strategy", label: "Strategic Consulting" },
-        { href: "/services/digital", label: "Digital Transformation" },
-        { href: "/services/innovation", label: "Innovation Solutions" }
+        { href: "/services/strategy", label: "Strategic Consulting", icon: Layers },
+        { href: "/services/digital", label: "Digital Transformation", icon: Globe },
+        { href: "/services/innovation", label: "Innovation Solutions", icon: Rocket }
       ]
     },
     { 
       href: "/Portfolio", 
       label: "Portfolio",
+      icon: Briefcase,
       dropdown: false
     },
     { 
       href: "/Contact", 
       label: "Contact",
+      icon: Send,
       dropdown: false
     }
   ];
@@ -70,44 +78,51 @@ const Navbar = () => {
       className={`
         fixed top-0 left-0 right-0 z-50 
         ${scrolled 
-          ? 'bg-slate-100/90 shadow-lg backdrop-blur-md' 
-          : 'bg-slate-700'}
-        transition-all duration-300 ease-in-out
+          ? 'bg-white/90 shadow-2xl backdrop-blur-xl' 
+          : 'bg-gradient-to-br from-blue-50 to-indigo-100'}
+        transition-all duration-500 ease-in-out
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
+          {/* Logo with Hover Animation */}
           <Link 
             href="/" 
             className={`
-              text-3xl font-bold tracking-tight 
-              ${scrolled ? 'text-slate-800' : 'text-white'}
-              transition-colors duration-300 
-              hover:text-slate-600 
-              transform hover:scale-105
+              flex items-center space-x-2
+              ${scrolled ? 'text-slate-800' : 'text-sky-800'}
+              transition-all duration-300 
+              transform hover:scale-105 hover:rotate-3
             `}
           >
-            <Image src={bill} alt='YourLog0' height={24} width={24}/>
+            <Image 
+              src={bill} 
+              alt='Company Logo' 
+              height={32} 
+              width={32}
+              className="rounded-full shadow-md"
+            />
+            <span className="font-bold text-xl tracking-wider">Bliss</span>
           </Link>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button with Advanced Animation */}
           <div className="md:hidden">
             <button 
               onClick={toggleMenu}
               aria-label="Toggle Menu"
               className={`
-                ${scrolled ? 'text-slate-800' : 'text-white'}
+                ${scrolled ? 'text-slate-800' : 'text-sky-800'}
                 focus:outline-none 
                 transition-all duration-300 
                 hover:rotate-12 hover:scale-110
+                ${isOpen ? 'animate-pulse' : ''}
               `}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={28} strokeWidth={2} /> : <Menu size={28} strokeWidth={2} />}
             </button>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with Enhanced Hover Effects */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link, index) => (
               <div 
@@ -123,10 +138,17 @@ const Navbar = () => {
                     font-medium 
                     flex items-center 
                     transition-all duration-300 
-                    hover:text-slate-500 
+                    hover:text-blue-400 
+                    transform hover:scale-105
                     ${link.dropdown ? 'pr-4' : ''}
                   `}
                 >
+                  <link.icon 
+                    size={18} 
+                    className="mr-2 
+                      transition-transform duration-300 
+                      group-hover:rotate-12"
+                  />
                   {link.label}
                   {link.dropdown && (
                     <ChevronDown 
@@ -137,24 +159,35 @@ const Navbar = () => {
                   )}
                 </Link>
 
-                {/* Dropdown Menu */}
+                {/* Dropdown Menu with Enhanced Styling */}
                 {link.dropdown && activeDropdown === index && (
-                  <div className="absolute top-full left-0 mt-4 w-64 
-                    bg-white rounded-lg shadow-2xl 
-                    ring-1 ring-slate-200 
-                    py-2 z-50 
-                    transition-all duration-300"
+                  <div className="absolute top-full left-0 mt-4 w-72 
+                    bg-white rounded-xl shadow-2xl 
+                    ring-2 ring-blue-100 
+                    py-3 z-50 
+                    transition-all duration-500 
+                    origin-top-left 
+                    scale-100 
+                    animate-slide-down"
                   >
                     {link.dropdown.map((sublink) => (
                       <Link
                         key={sublink.href}
                         href={sublink.href}
-                        className="block px-4 py-2 
+                        className="flex items-center px-4 py-3 
                           text-slate-800 
-                          hover:bg-slate-100 
-                          hover:text-slate-600 
-                          transition-colors duration-200"
+                          hover:bg-blue-50 
+                          hover:text-blue-600 
+                          transition-all duration-300
+                          group"
                       >
+                        <sublink.icon 
+                          size={18} 
+                          className="mr-3 
+                            text-slate-500 
+                            group-hover:text-blue-500 
+                            transition-colors"
+                        />
                         {sublink.label}
                       </Link>
                     ))}
@@ -165,10 +198,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu with Slide Animation */}
         {isOpen && (
           <div className="md:hidden absolute left-0 right-0 
-            bg-white shadow-2xl z-40 rounded-b-lg"
+            bg-white shadow-2xl z-40 rounded-b-lg
+            animate-slide-down"
           >
             <div className="px-4 pt-4 pb-6 space-y-2">
               {navLinks.map((link, index) => (
@@ -181,11 +215,19 @@ const Navbar = () => {
                       href={link.href}
                       onClick={toggleMenu}
                       className="text-slate-800 
-                        block px-4 py-2 
-                        rounded-md transition-colors 
-                        hover:bg-slate-100 
-                        hover:text-slate-600"
+                        flex items-center
+                        block px-4 py-3 
+                        rounded-lg transition-colors 
+                        hover:bg-blue-50 
+                        hover:text-blue-600"
                     >
+                      <link.icon 
+                        size={18} 
+                        className="mr-3 
+                          text-slate-500 
+                          group-hover:text-blue-500 
+                          transition-colors"
+                      />
                       {link.label}
                     </Link>
                     {link.dropdown && (
@@ -200,21 +242,30 @@ const Navbar = () => {
                     )}
                   </div>
 
-                  {/* Mobile Dropdown */}
+                  {/* Mobile Dropdown with Accordion Style */}
                   {link.dropdown && activeDropdown === index && (
-                    <div className="pl-6 mt-2 space-y-2">
+                    <div className="pl-6 mt-2 space-y-2 
+                      animate-slide-down"
+                    >
                       {link.dropdown.map((sublink) => (
                         <Link
                           key={sublink.href}
                           href={sublink.href}
                           onClick={toggleMenu}
-                          className="block px-4 py-2 
+                          className="flex items-center px-4 py-3 
                             text-slate-700 
-                            hover:bg-slate-100 
-                            hover:text-slate-900 
-                            rounded-md 
+                            hover:bg-blue-50 
+                            hover:text-blue-700 
+                            rounded-lg 
                             transition-colors"
                         >
+                          <sublink.icon 
+                            size={16} 
+                            className="mr-3 
+                              text-slate-500 
+                              group-hover:text-blue-500 
+                              transition-colors"
+                          />
                           {sublink.label}
                         </Link>
                       ))}

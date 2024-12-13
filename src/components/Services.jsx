@@ -122,7 +122,7 @@ const ServiceCard = ({
               <div className="p-6 bg-white">
                 <p className="text-gray-700 mb-4">{fullDescription}</p>
                 <Link
-                  href="/contact"
+                  href="/Contact"
                   className="inline-flex items-center text-sky-600 hover:text-sky-800 font-semibold"
                 >
                   Get Started <ArrowRight className="ml-2" size={20} />
@@ -259,7 +259,7 @@ const ServicesPage = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600"
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight bg-clip-text text-white bg-gradient-to-r from-sky-400 to-emerald-600"
           >
             Transform Your Digital Landscape
           </motion.h1>
@@ -276,12 +276,12 @@ const ServicesPage = () => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a 
-              href="/contact" 
+            <Link 
+              href="/Contact" 
               className="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-8 py-4 rounded-full shadow-xl transition-all transform hover:scale-105 flex items-center justify-center mx-auto w-fit"
             >
               Start Your Digital Journey <ArrowRight className="ml-2" />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

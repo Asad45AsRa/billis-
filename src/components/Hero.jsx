@@ -6,7 +6,7 @@ import {
   FaVideo, FaDownload, FaExpand, FaBolt, FaLightbulb, FaRoute
 } from "react-icons/fa";
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-
+import frnt from '../../public/bliss-Logo--2.png'
 const Hero = () => {
   const [currentTagline, setCurrentTagline] = useState(0);
   const videoRef = useRef(null);
@@ -291,7 +291,7 @@ const Hero = () => {
             >
               <video
                 ref={videoRef}
-                src="/path/to/your/video.mp4"
+                src="https://media.istockphoto.com/id/1916685810/video/closeup-hands-and-brainstorming-with-business-people-planning-and-ideas-with-a-project.mp4?s=mp4-640x640-is&k=20&c=0s1YmgU658xBxuO28gcOHssr3mDAVz5-vfP3_o2iitY="
                 className="w-full"
                 poster="/path/to/your/poster.jpg"
                 onClick={toggleVideo}
@@ -300,23 +300,8 @@ const Hero = () => {
               />
 
               {/* Custom Video Controls with Enhanced Design */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-sm rounded-full flex items-center space-x-4 p-3 shadow-lg">
-                {[
-                  { icon: isVideoPlaying ? <FaPause /> : <FaPlay />, action: toggleVideo },
-                  { icon: <FaExpand />, action: toggleFullscreen },
-                  { icon: <FaDownload />, action: () => alert('Download functionality') }
-                ].map((control, index) => (
-                  <motion.button
-                    key={index}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={control.action}
-                    className="text-slate-900 hover:text-sky-600 transition-colors"
-                  >
-                    {control.icon}
-                  </motion.button>
-                ))}
-              </div>
+              
+              
             </motion.div>
 
             {/* Video Caption with Icon Animation */}

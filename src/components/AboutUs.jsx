@@ -249,12 +249,12 @@ const AboutUs = () => {
                   className={`
                     p-6 rounded-xl cursor-pointer transition-all duration-300
                     ${activeProcess === index 
-                      ? 'bg-indigo-600 text-white shadow-2xl' 
+                      ? 'bg-sky-600 text-white shadow-2xl' 
                       : 'bg-white text-gray-800 hover:bg-indigo-50 shadow-md'}
                   `}
                 >
                   <div className="flex items-center mb-3">
-                    <step.icon className={`mr-4 ${activeProcess === index ? 'text-white' : 'text-indigo-600'}`} size={30} />
+                    <step.icon className={`mr-4 ${activeProcess === index ? 'text-white' : 'text-sky-600'}`} size={30} />
                     <h3 className="text-xl font-semibold">{step.title}</h3>
                   </div>
                 </motion.div>
@@ -270,7 +270,7 @@ const AboutUs = () => {
                 transition={{ duration: 0.3 }}
                 className="w-full md:w-1/2 bg-white p-8 rounded-xl shadow-lg"
               >
-                <h4 className="text-2xl font-bold mb-4 text-indigo-600">
+                <h4 className="text-2xl font-bold mb-4 text-sky-600">
                   {processSteps[activeProcess].title}
                 </h4>
                 <p className="text-gray-600 mb-4">
