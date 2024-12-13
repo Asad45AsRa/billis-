@@ -97,7 +97,7 @@ const ContactUs = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            to: 'info@blisstechnologies.com',
+            to: 'king234asad@gmail.com',
             ...formData
           })
         });
